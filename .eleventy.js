@@ -20,8 +20,8 @@ module.exports = function (eleventyConfig) {
     return collectionApi
       .getAll()
       .filter((i) => i.data.layout == "pages/recipe.njk")
-      .sort((recipeA, recipeB) => {
-        return recipeA.date - recipeB.date;
+      .sort((a, b) => {
+        return a.data.title > b.data.title ? 1 : -1;
       });
   });
 
@@ -48,7 +48,7 @@ module.exports = function (eleventyConfig) {
       if (isNaN(quantity)) {
         return name;
       } else {
-        return `${name}, ${quantity} ${units} `;
+        return `${name}, ${quantity} ${units ? units : ""} `;
       }
     }
   );
