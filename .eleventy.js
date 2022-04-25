@@ -1,5 +1,6 @@
 const eleventyPluginCookLang = require("eleventy-plugin-cooklang");
 const pluginNavigation = require("@11ty/eleventy-navigation");
+const htmlmin = require("html-minifier");
 const now = String(Date.now());
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginNavigation);
