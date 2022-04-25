@@ -9,19 +9,13 @@
         <link rel="stylesheet" href="/style.css?v={% version %}"/>
     </head>
     <body>
-        <header>
-            <nav class="container flex flex-wrap justify-between max-w-3xl px-8 pt-2 mx-auto">
-                <div>
-                    <h1>
-                        <a href="{{ site.baseUrl }}">{{ metadata.title }}</a>
-                    </h1>
-                    <p>{{site.description}}</p>
-                </div>
-
-            </nav>
+        <header class="max-w-3xl py-12 mx-auto prose text-slate-400">
+            <h1 >
+                <a href="/">{{ metadata.title }}</a>
+            </h1>
         </header>
 
-        <main class="prose">
+        <main class="max-w-3xl px-6 mx-auto prose">
             {{ content | safe }}
         </main>
 
