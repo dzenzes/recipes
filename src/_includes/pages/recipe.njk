@@ -1,0 +1,50 @@
+---
+layout: layouts/home.njk
+---
+
+<h1>{{ title | title }}</h1>
+
+<div>
+    {% for tag in tags -%}
+        <a href="{{ tag | tagUrl('recipe' )| url }}">#{{ tag | formatTag }}</a>
+
+        {%- if not loop.last %}, {% endif %}
+    {%- endfor %}
+</div>
+
+<section>
+    <h2>Zutaten:</h2>
+    <ul>
+        {% for item in ingredients %}
+            <li>{% ingredient item %}</li>
+        {% endfor %}
+    </ul>
+</section>
+
+<section>
+    <h2>Utensilien:</h2>
+    <ul>
+        {% for item in cookware %}
+            <li>
+                {{ item.name }}
+            </li>
+        {% endfor %}
+    </ul>
+</section>
+
+<section>
+    <h2>Anleitung</h2>
+    <ul>
+        {% for step in steps %}
+            <li>
+                {%- for item in step -%}
+                    {{ item | safe }}
+                {%- endfor -%}
+            </li>
+        {% endfor %}
+    </ul>
+</section>
+
+<p>
+    Quelle: {{source}}
+</p>

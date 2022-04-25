@@ -1,0 +1,29 @@
+---
+layout: layouts/home.njk
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - nav
+    - post
+    - posts
+    - tagList
+permalink: /tags/{{tag}}/
+---
+
+<h1>Tagged “{{ tag | formatTag }}”</h1>
+
+<ol>
+    {% set taglist = collections[tag] %}
+    {% for post in taglist | reverse %}
+        <li>
+            <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+        </li>
+    {% endfor %}
+</ol>
+
+<p>
+  Visit <a href="/tags/">here</a> to see all recipe tags used on this site.
+</p>

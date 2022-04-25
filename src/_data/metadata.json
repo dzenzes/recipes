@@ -1,0 +1,12 @@
+{
+  "title": "Daniels Rezepte",
+  "url": "https://rezepte.zenzes.me/",
+  "language": "de",
+  "description": "Sammlung meiner Rezepte.",
+
+  "author": {
+    "name": "Daniel Zenzes",
+    "email": "daniel@zenzes.me",
+    "url": "https://rezepte.zenzes.me/about-me/"
+  }
+}
