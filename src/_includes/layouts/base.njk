@@ -6,25 +6,22 @@
         <title>{{ title or metadata.title }}</title>
         <meta name="description" content="{{ description or metadata.description }}">
         <meta name="generator" content="{{ eleventy.generator }}">
+        <link rel="stylesheet" href="/style.css?v={% version %}"/>
     </head>
     <body>
         <header>
-            <h1>
-                <a href="{{ '/' | url }}">{{ metadata.title }}</a>
-            </h1>
+            <nav class="container flex flex-wrap justify-between max-w-3xl px-8 pt-2 mx-auto">
+                <div>
+                    <h1>
+                        <a href="{{ site.baseUrl }}">{{ metadata.title }}</a>
+                    </h1>
+                    <p>{{site.description}}</p>
+                </div>
 
-            <nav>
-                <ul>
-                    {%- for entry in collections.all | eleventyNavigation %}
-                        <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}">
-                            <a href="{{ entry.url | url }}">{{ entry.title }}</a>
-                        </li>
-                    {%- endfor %}
-                </ul>
             </nav>
         </header>
 
-        <main>
+        <main class="prose">
             {{ content | safe }}
         </main>
 
