@@ -59,7 +59,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({ "./_tmp/style.css": "./style.css" });
   // eleventyConfig.addPassthroughCopy({ "./src/*.cook": "./" });
-  eleventyConfig.addPassthroughCopy({ "./src/assets/favicon.ico": "/" });
+  eleventyConfig.addPassthroughCopy({ "./assets/favicon.ico": "/" });
 
   eleventyConfig.addShortcode("version", function () {
     return now;
