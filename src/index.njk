@@ -21,6 +21,7 @@ eleventyNavigation:
           <code>{{ recipe.url }}</code>
         {% endif %}
       </a>
+      {#
 &nbsp;
       ({% for tag in recipe.data.tags %}
         {%- if tag != "posts" -%}
@@ -28,7 +29,7 @@ eleventyNavigation:
         {%- endif -%}
         {%- if not loop.last %}, {% endif %}
       {% endfor %})
-
+#}
     </li>
   {% endfor %}
 </ul>

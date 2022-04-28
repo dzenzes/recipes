@@ -3,7 +3,7 @@ layout: layouts/base.njk
 ---
 
 <h1>{{ title | title }}</h1>
-
+{#
 <div>
     {% for tag in tags -%}
         <a href="{{ tag | tagUrl('recipe' )| url }}">#{{ tag | formatTag }}</a>
@@ -11,7 +11,7 @@ layout: layouts/base.njk
         {%- if not loop.last %}, {% endif %}
     {%- endfor %}
 </div>
-
+#}
 <section>
     <h2>Zutaten:</h2>
     <ul>
