@@ -58,6 +58,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget("./styles/tailwind.css");
 
   eleventyConfig.addPassthroughCopy({ "./_tmp/style.css": "./style.css" });
+  // eleventyConfig.addPassthroughCopy({ "./src/*.cook": "./" });
+  eleventyConfig.addPassthroughCopy({ "./src/assets/favicon.ico": "/" });
 
   eleventyConfig.addShortcode("version", function () {
     return now;
