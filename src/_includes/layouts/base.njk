@@ -7,6 +7,11 @@
         <meta name="description" content="{{ description or metadata.description }}">
         <meta name="generator" content="{{ eleventy.generator }}">
         <link rel="stylesheet" href="/style.css?v={% version %}"/>
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:site" content="danielzenzes"/>
+        <meta name="twitter:title" content="{{  title or metadata.title }}"/>
+        <meta name="twitter:description" content="{{ description }}"/>
+        <meta name="twitter:image" content="{% getSharingImage page %}"/>
     </head>
     <body>
         <header class="max-w-3xl py-12 mx-auto prose text-slate-400">

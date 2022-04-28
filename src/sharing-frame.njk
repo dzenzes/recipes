@@ -1,0 +1,47 @@
+---
+layout: null
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Social sharing image generator</title>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+
+            .background {
+                width: 600px;
+                height: 315px;
+                color: #fff;
+                background: black;
+                text-align: center;
+                font-weight: bold;
+                font-size: 28px;
+                display: flex;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="background">
+            <div id="slot"></div>
+        </div>
+
+        <script>
+            const queryString = window.location.search
+            const urlParams = new URLSearchParams(queryString)
+            const title = urlParams.get("title") || "Example"
+
+            const slot = document.getElementById("slot")
+
+            slot.innerHTML = title
+        </script>
+
+    </body>
+</html>

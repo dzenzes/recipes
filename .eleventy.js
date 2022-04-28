@@ -34,6 +34,18 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("filterTagList", filterTagList);
 
+  eleventyConfig.addFilter("filterSharablePages", (pages) =>
+    pages.filter((page) => page.data.layout)
+  );
+
+  // We'll use the path (`fileSlug`) as the name of the image.
+  // The homepage ("index.html") won't have a slug, so we'll
+  // just call it "index".
+  eleventyConfig.addFilter(
+    "toSocialSharingImagePath",
+    (path) => path || "index"
+  );
+
   // Create an array of all tags
   eleventyConfig.addCollection("tagList", function (collection) {
     let tagSet = new Set();
@@ -60,10 +72,17 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "./_tmp/style.css": "./style.css" });
   // eleventyConfig.addPassthroughCopy({ "./src/*.cook": "./" });
   eleventyConfig.addPassthroughCopy({ "./assets/favicon.ico": "/" });
+  eleventyConfig.addPassthroughCopy({ "./assets/images": "/images" });
 
   eleventyConfig.addShortcode("version", function () {
     return now;
   });
+  eleventyConfig.addShortcode(
+    "getSharingImage",
+    ({ fileSlug }) =>
+      `https://recipes.zenzes.me/images/social/${fileSlug || "index"}.jpg`
+  );
+
   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
     if (
       process.env.ELEVENTY_PRODUCTION &&
