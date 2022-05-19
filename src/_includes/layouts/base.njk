@@ -3,15 +3,30 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{{ title or metadata.title }}</title>
-        <meta name="description" content="{{ description or metadata.description }}">
+
         <meta name="generator" content="{{ eleventy.generator }}">
         <link rel="stylesheet" href="/style.css?v={% version %}"/>
+
+        <title>{{ title or metadata.title }}</title>
+        <meta name="description" content="{{ description or metadata.description }}">
+
+        <!-- Facebook Meta Tags -->
+
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="{{ title or metadata.title }}">
+        <meta property="og:description" content="{{ description or metadata.description }}">
+        <meta property="og:image" content="{% getSharingImage page %}">
+
+        <!-- Twitter Meta Tags -->
         <meta name="twitter:card" content="summary_large_image"/>
         <meta name="twitter:site" content="danielzenzes"/>
-        <meta name="twitter:title" content="{{  title or metadata.title }}"/>
-        <meta name="twitter:description" content="{{ description }}"/>
-        <meta name="twitter:image" content="{% getSharingImage page %}"/>
+        <meta name="twitter:card" content="summary_large_image">
+        <meta property="twitter:domain" content="recipes.zenzes.me">
+
+        <meta name="twitter:title" content="{{ title or metadata.title }}">
+        <meta name="twitter:description" content="{{ description or metadata.description }}">
+        <meta name="twitter:image" content="{% getSharingImage page %}">
+
     </head>
     <body>
         <header class="max-w-3xl py-12 mx-auto prose text-slate-400">
