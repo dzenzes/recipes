@@ -7,6 +7,7 @@ layout: null
     <head>
         <meta charset="utf-8">
         <title>Social sharing image generator</title>
+        <link rel="stylesheet" href="/style.css?v={% version %}"/>
         <style>
             * {
                 padding: 0;
@@ -17,20 +18,13 @@ layout: null
             .background {
                 width: 600px;
                 height: 315px;
-                color: #fff;
-                background: black;
-                text-align: center;
-                font-weight: bold;
-                font-size: 28px;
-                display: flex;
-                align-items: center;
             }
         </style>
     </head>
     <body>
 
-        <div class="background">
-            <div id="slot"></div>
+        <div class="flex items-center prose bg-gray-100 background">
+            <h1 class="p-8 border-gray-400" id="slot"></h1>
         </div>
 
         <script>
