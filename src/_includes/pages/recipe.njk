@@ -10,8 +10,7 @@ layout: layouts/base.njk
 
 <div>
     {% for tag in tags -%}
-        <a href="{{ tag | tagUrl('recipe' )| url }}">#{{ tag | formatTag }}</a>
-        {%- if not loop.last %}, {% endif %}
+        <a class="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold text-gray-700 no-underline bg-gray-200 rounded-full hover:bg-gray-300" href="{{ tag | tagUrl('recipe' )| url }}">#{{ tag | formatTag }}</a>
     {%- endfor %}
 </div>
 
