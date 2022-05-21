@@ -9,27 +9,37 @@ eleventyNavigation:
   Ich teste immer wieder gerne neue Rezepte und habe hier einige davon gesammelt um überall darauf zugreifen zu können. 🧑‍🍳
 </p>
 
-<ul class="postlist">
+<section class="grid grid-cols-1 gap-5 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
   {% for recipe in collections.recipes %}
-    <li
-    class="postlist-item{% if recipe.url == url %} postlist-item-active{% endif %}"
-  >
-      <a href="{{ recipe.url | url }}" class="postlist-link">
-        {% if recipe.data.title %}
-          {{ recipe.data.title }}
-        {% else %}
-          <code>{{ recipe.url }}</code>
-        {% endif %}
-      </a>
-      {#
-&nbsp;
-      ({% for tag in recipe.data.tags %}
-        {%- if tag != "posts" -%}
-          <a href="{{ tag | tagUrl('recipe' )| url }}">#{{ tag | formatTag }}</a>
-        {%- endif -%}
-        {%- if not loop.last %}, {% endif %}
-      {% endfor %})
-#}
-    </li>
+    <div class="overflow-hidden rounded shadow-lg">
+      {#    <img class="w-full" src="/mountain.jpg" alt="Mountain">#}
+      <div class="px-6 py-4">
+        <h1 class="mb-2 text-xl font-bold">
+          <a href="{{ recipe.url | url }}" class="postlist-link">
+            {% if recipe.data.title %}
+              {{ recipe.data.title }}
+            {% else %}
+              <code>{{ recipe.url }}</code>
+            {% endif %}
+          </a>
+        </h1>
+        <p class="text-base text-gray-700">
+          {{ recipe.data.note }}
+        </p>
+      </div>
+      {% if recipe.data.tags.length > 0 %}
+        <div class="px-6 pt-4 pb-2">
+          {% for tag in recipe.data.tags %}
+            {%- if tag != "posts" -%}
+              <a class="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold text-gray-700 no-underline bg-gray-200 rounded-full hover:bg-gray-300" href="{{ tag | tagUrl('recipe' )| url }}">#{{ tag | formatTag }}</a>
+
+            {%- endif -%}
+            {%- if not loop.last %}, {% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
+
+    </div>
+
   {% endfor %}
-</ul>
+</section>
