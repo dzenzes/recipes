@@ -4,7 +4,8 @@ eleventyNavigation:
   key: Home
   order: 1
 ---
-{% from 'macros/tags.njk' import tag %}
+
+{% from 'macros/card.njk' import recipecard %}
 
 <p>
   Ich teste immer wieder gerne neue Rezepte und habe hier einige davon gesammelt um überall darauf zugreifen zu können. 🧑‍🍳
@@ -12,33 +13,6 @@ eleventyNavigation:
 
 <section class="grid grid-cols-1 gap-5 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
   {% for recipe in collections.recipes %}
-    <div class="overflow-hidden rounded shadow-lg">
-      {#    <img class="w-full" src="/mountain.jpg" alt="{{ recipe.data.title }}">#}
-      <div class="px-6 py-4">
-        <h1 class="mb-2 text-xl font-bold">
-          <a href="{{ recipe.url | url }}" class="postlist-link">
-            {% if recipe.data.title %}
-              {{ recipe.data.title }}
-            {% else %}
-              <code>{{ recipe.url }}</code>
-            {% endif %}
-          </a>
-        </h1>
-        <p class="text-base text-gray-700">
-          {{ recipe.data.note }}
-        </p>
-      </div>
-      {% if recipe.data.tags.length > 0 %}
-        <div class="px-6 pt-4 pb-2">
-          {% for tagitem in recipe.data.tags %}
-            {%- if tagitem != "posts" -%}
-              {{tag(tagitem)}}
-            {%- endif -%}
-          {% endfor %}
-        </div>
-      {% endif %}
-
-    </div>
-
+    {{recipecard(recipe)}}
   {% endfor %}
 </section>
