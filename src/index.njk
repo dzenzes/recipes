@@ -13,7 +13,7 @@ eleventyNavigation:
 <section class="grid grid-cols-1 gap-5 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
   {% for recipe in collections.recipes %}
     <div class="overflow-hidden rounded shadow-lg">
-      {#    <img class="w-full" src="/mountain.jpg" alt="Mountain">#}
+      {#    <img class="w-full" src="/mountain.jpg" alt="{{ recipe.data.title }}">#}
       <div class="px-6 py-4">
         <h1 class="mb-2 text-xl font-bold">
           <a href="{{ recipe.url | url }}" class="postlist-link">
@@ -33,7 +33,6 @@ eleventyNavigation:
           {% for tagitem in recipe.data.tags %}
             {%- if tagitem != "posts" -%}
               {{tag(tagitem)}}
-
             {%- endif -%}
           {% endfor %}
         </div>
