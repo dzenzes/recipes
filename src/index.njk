@@ -4,6 +4,7 @@ eleventyNavigation:
   key: Home
   order: 1
 ---
+{% from 'macros/tags.njk' import tag %}
 
 <p>
   Ich teste immer wieder gerne neue Rezepte und habe hier einige davon gesammelt um überall darauf zugreifen zu können. 🧑‍🍳
@@ -29,9 +30,10 @@ eleventyNavigation:
       </div>
       {% if recipe.data.tags.length > 0 %}
         <div class="px-6 pt-4 pb-2">
-          {% for tag in recipe.data.tags %}
-            {%- if tag != "posts" -%}
-              <a class="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold text-gray-700 no-underline bg-gray-200 rounded-full hover:bg-gray-300" href="{{ tag | tagUrl('recipe' )| url }}">#{{ tag | formatTag }}</a>
+          {% for tagitem in recipe.data.tags %}
+            {%- if tagitem != "posts" -%}
+              {{tag(tagitem)}}
+
             {%- endif -%}
           {% endfor %}
         </div>
