@@ -1,9 +1,9 @@
 const puppeteer = require("puppeteer");
-const fetch = require("node-fetch-commonjs");
+//const fetch = require("node-fetch-commonjs");
 const fs = require("fs");
 
-const PAGES_JSON = "http://localhost:8080/sharing-pages.json";
-const FRAME_URL = "http://localhost:8080/sharing-frame/index.html?title=";
+const PAGES_JSON = "http://127.0.0.1:8080/sharing-pages.json";
+const FRAME_URL = "http://127.0.0.1:8080/sharing-frame/index.html?title=";
 
 async function main() {
   const response = await fetch(PAGES_JSON);
