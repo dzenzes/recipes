@@ -1,0 +1,7 @@
+[build]
+  command = "pnpm build || ( npm install pnpm && pnpm build )"
+  publish = "_site"
+ 
+[dev]
+ command = "pnpm start || ( npm install pnpm && pnpm start )"
+ 
