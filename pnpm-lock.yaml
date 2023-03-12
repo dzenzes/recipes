@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@11ty/eleventy': 1.0.2
   '@11ty/eleventy-navigation': 0.3.5
-  '@tailwindcss/typography': 0.5.7
+  '@tailwindcss/typography': 0.5.9
   eleventy-plugin-cooklang: 0.0.5
   html-minifier: 4.0.0
   node-fetch-commonjs: 3.2.4
@@ -13,7 +13,7 @@ specifiers:
 devDependencies:
   '@11ty/eleventy': 1.0.2
   '@11ty/eleventy-navigation': 0.3.5
-  '@tailwindcss/typography': 0.5.7_tailwindcss@3.2.1
+  '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.1
   eleventy-plugin-cooklang: 0.0.5
   html-minifier: 4.0.0
   node-fetch-commonjs: 3.2.4
@@ -176,8 +176,8 @@ packages:
     resolution: {integrity: sha512-+9jVqKhRSpsc591z5vX+X5Yyw+he/HCB4iQ/RYxw35CEPaY1gnsNE43nf9n9AaYjAQrTiI/mOwKUKdUs9vf7Xg==}
     dev: true
 
-  /@tailwindcss/typography/0.5.7_tailwindcss@3.2.1:
-    resolution: {integrity: sha512-JTTSTrgZfp6Ki4svhPA4mkd9nmQ/j9EfE7SbHJ1cLtthKkpW2OxsFXzSmxbhYbEkfNIyAyhle5p4SYyKRbz/jg==}
+  /@tailwindcss/typography/0.5.9_tailwindcss@3.2.1:
+    resolution: {integrity: sha512-t8Sg3DyynFysV9f4JDOVISGsjazNb48AeIYQwcL+Bsq5uf4RYL75C1giZ43KISjeDGBaTN3Kxh7Xj/vRSMJUUg==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
     dependencies:
@@ -1084,6 +1084,18 @@ packages:
       debug: 4.3.2
     dev: true
 
+  /follow-redirects/1.15.2_debug@4.3.4:
+    resolution: {integrity: sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
+    dependencies:
+      debug: 4.3.4
+    dev: true
+
   /formdata-polyfill/4.0.10:
     resolution: {integrity: sha512-buewHzMvYL29jdeQTVILecSaZKnt/RJWjoZCF5OW60Z67/GmSLBkOFM7qh1PI3zFNtJbaZL5eQu1vLfazOwj4g==}
     engines: {node: '>=12.20.0'}
@@ -1292,7 +1304,7 @@ packages:
     engines: {node: '>=8.0.0'}
     dependencies:
       eventemitter3: 4.0.7
-      follow-redirects: 1.15.2_debug@4.3.2
+      follow-redirects: 1.15.2_debug@4.3.4
       requires-port: 1.0.0
     transitivePeerDependencies:
       - debug
