@@ -9,7 +9,7 @@ devDependencies:
     version: 0.3.5
   '@tailwindcss/typography':
     specifier: 0.5.9
-    version: 0.5.9(tailwindcss@3.3.0)
+    version: 0.5.9(tailwindcss@3.3.1)
   eleventy-plugin-cooklang:
     specifier: 0.0.5
     version: 0.0.5
@@ -23,8 +23,8 @@ devDependencies:
     specifier: 19.9.0
     version: 19.9.0
   tailwindcss:
-    specifier: 3.3.0
-    version: 3.3.0(postcss@8.4.18)
+    specifier: 3.3.1
+    version: 3.3.1(postcss@8.4.18)
 
 packages:
 
@@ -231,7 +231,7 @@ packages:
       lodash.deburr: 4.1.0
     dev: true
 
-  /@tailwindcss/typography@0.5.9(tailwindcss@3.3.0):
+  /@tailwindcss/typography@0.5.9(tailwindcss@3.3.1):
     resolution: {integrity: sha512-t8Sg3DyynFysV9f4JDOVISGsjazNb48AeIYQwcL+Bsq5uf4RYL75C1giZ43KISjeDGBaTN3Kxh7Xj/vRSMJUUg==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
@@ -240,7 +240,7 @@ packages:
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       postcss-selector-parser: 6.0.10
-      tailwindcss: 3.3.0(postcss@8.4.18)
+      tailwindcss: 3.3.1(postcss@8.4.18)
     dev: true
 
   /@types/minimatch@3.0.5:
@@ -2084,8 +2084,8 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /tailwindcss@3.3.0(postcss@8.4.18):
-    resolution: {integrity: sha512-hOXlFx+YcklJ8kXiCAfk/FMyr4Pm9ck477G0m/us2344Vuj355IpoEDB5UmGAsSpTBmr+4ZhjzW04JuFXkb/fw==}
+  /tailwindcss@3.3.1(postcss@8.4.18):
+    resolution: {integrity: sha512-Vkiouc41d4CEq0ujXl6oiGFQ7bA3WEhUZdTgXAhtKxSy49OmKs8rEfQmupsfF0IGW8fv2iQkp1EVUuapCFrZ9g==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     peerDependencies:
