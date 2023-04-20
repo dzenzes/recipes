@@ -20,8 +20,8 @@ devDependencies:
     specifier: 3.2.4
     version: 3.2.4
   puppeteer:
-    specifier: 19.9.1
-    version: 19.9.1
+    specifier: 19.10.0
+    version: 19.10.0
   tailwindcss:
     specifier: 3.3.1
     version: 3.3.1(postcss@8.4.18)
@@ -1821,8 +1821,8 @@ packages:
       once: 1.4.0
     dev: true
 
-  /puppeteer-core@19.9.1:
-    resolution: {integrity: sha512-46JGqhqTgYO5DuUMRGUiMCKM/86uHMsMCK7Fw7cbY/p+eCKLIPGVyQyI/E0UcGYa0+OH3dz0ResaDdHxqCgDDw==}
+  /puppeteer-core@19.10.0:
+    resolution: {integrity: sha512-F6btgaEJXcpdw/kJszBhe7t4kx1C42oG159romCagX8ttComuk5dqkmAd/AQc/E4cS3onOUsHI5WgjIstuYsFw==}
     engines: {node: '>=14.14.0'}
     peerDependencies:
       typescript: '>= 4.7.4'
@@ -1848,8 +1848,8 @@ packages:
       - utf-8-validate
     dev: true
 
-  /puppeteer@19.9.1:
-    resolution: {integrity: sha512-Ii8yZySNdpPzeKAK6ROFQ+gAi04igoZ0cPsBE1LW9fmzkqQTqbJpEGhJ/5gBS8oVqkQ2CNFA4BskJl75zaWWgA==}
+  /puppeteer@19.10.0:
+    resolution: {integrity: sha512-u2ftBcAu1cL5x2uKD5FLhHkN60Z1d5T0iMftiUEyRfdwT0poObRvjpc69F0HbtN/7lFeW2v+VN4pgeVVSOZYWg==}
     requiresBuild: true
     dependencies:
       '@puppeteer/browsers': 0.4.1
@@ -1857,7 +1857,7 @@ packages:
       https-proxy-agent: 5.0.1
       progress: 2.0.3
       proxy-from-env: 1.1.0
-      puppeteer-core: 19.9.1
+      puppeteer-core: 19.10.0
     transitivePeerDependencies:
       - bufferutil
       - encoding
