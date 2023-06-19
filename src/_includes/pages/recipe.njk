@@ -3,54 +3,59 @@ layout: layouts/base.njk
 ---
 {% from 'macros/tags.njk' import tag %}
 <h1>{{ title }}</h1>
+{%if source %}
+    <p>
+        <a href="{{source}}">Quelle</a>
+    </p
+{%endif%}
 
 {% if note %}
     <p>{{note}}</p>
 {% endif %}
 
 <div>
-    {% for tagitem in tags -%}
-        {{tag(tagitem)}}
+{% for tagitem in tags -%}
+    {{tag(tagitem)}}
 
-    {%- endfor %}
+{%- endfor %}
 </div>
 
 <section>
-    <h2>Zutaten:</h2>
-    <ul>
-        {% for item in ingredients %}
-            <li>{% ingredient item %}</li>
-        {% endfor %}
-    </ul>
+<h2>Zutaten:</h2>
+<ul>
+    {% for item in ingredients %}
+        <li>{% ingredient item %}</li>
+    {% endfor %}
+</ul>
 </section>
 
 <section>
-    <h2>Utensilien:</h2>
-    <ul>
-        {% for item in cookware %}
-            <li>
-                {{ item.name }}
-            </li>
-        {% endfor %}
-    </ul>
+<h2>Utensilien:</h2>
+<ul>
+    {% for item in cookware %}
+        <li>
+            {{ item.name }}
+        </li>
+    {% endfor %}
+</ul>
 </section>
 
 <section>
-    <h2>Anleitung</h2>
-    <ul>
-        {% for step in steps %}
-            <li>
-                {%- for item in step -%}
-                    {{ item | safe }}
-                {%- endfor -%}
-            </li>
-        {% endfor %}
-    </ul>
+<h2>Anleitung</h2>
+<ul>
+    {% for step in steps %}
+        <li>
+            {%- for item in step -%}
+                {{ item | safe }}
+            {%- endfor -%}
+        </li>
+    {% endfor %}
+</ul>
 </section>
 {% if source %}
-    <p>
+<p>
     Quelle: <a href="{{source}}" title="Quelle zum Rezept '{{title}}'">{{source}}</a>
-    </p>
+</p>
 {% endif %}
 {#
 <p>
