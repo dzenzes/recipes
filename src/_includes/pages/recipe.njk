@@ -52,11 +52,7 @@ layout: layouts/base.njk
     {% endfor %}
 </ul>
 </section>
-{% if source %}
-<p>
-    Quelle: <a href="{{source}}" title="Quelle zum Rezept '{{title}}'">{{source}}</a>
-</p>
-{% endif %}
+
 {#
 <p>
     <a href="/{{page.fileSlug}}.cook" title=".cook Datei zum Rezept">Download .cook</a>
