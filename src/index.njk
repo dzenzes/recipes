@@ -1,4 +1,5 @@
 ---
+title: Daniels Rezepte
 layout: layouts/base.njk
 eleventyNavigation:
   key: Home
@@ -7,11 +8,13 @@ eleventyNavigation:
 
 {% from 'macros/card.njk' import recipecard %}
 
+<div id="search" class="search"></div>
+
 <p>
   Ich teste immer wieder gerne neue Rezepte und habe hier einige davon gesammelt um überall darauf zugreifen zu können. 🧑‍🍳
 </p>
 
-<section class="grid grid-cols-1 gap-5 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
+<section class="grid grid-cols-1 gap-5 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3" data-pagefind-ignore>
   {% for recipe in collections.recipes %}
     {{recipecard(recipe)}}
   {% endfor %}

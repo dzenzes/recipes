@@ -16,16 +16,16 @@
         <meta property="og:title" content="{{ title or metadata.title }}">
         <meta property="og:description" content="{{ description or metadata.description }}">
         {% ogImage "./og-image.og.njk", { title: title or metadata.title, subtitle:description or metadata.description } %}
-
+        <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
     </head>
     <body>
         <header class="max-w-3xl py-12 mx-auto prose text-slate-400 lg:prose-xl">
             <h1 >
-                <a href="/">{{ metadata.title }}</a>
+                <a href="/">{{ title or metadata.title}}</a>
             </h1>
         </header>
 
-        <main class="max-w-3xl px-6 mx-auto prose">
+        <main class="max-w-3xl px-6 mx-auto prose data-pagefind-body">
             {{ content | safe }}
         </main>
 
@@ -37,6 +37,6 @@
                 </div>
             </div>
         </footer>
-
+        <script src="/pagefind/pagefind-ui.js" onload="new PagefindUI({ element: '#search', showImages: false });"></script>
     </body>
 </html>

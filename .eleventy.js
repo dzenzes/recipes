@@ -1,8 +1,9 @@
 import pluginNavigation from "@11ty/eleventy-navigation";
+import { execSync } from "child_process";
 import eleventyPluginCookLang from "eleventy-plugin-cooklang";
+import EleventyPluginOgImage from "eleventy-plugin-og-image";
+import fs from "fs";
 import htmlmin from "html-minifier";
-import EleventyPluginOgImage from 'eleventy-plugin-og-image';
-import fs from 'fs';
 
 const now = String(Date.now());
 export default function (eleventyConfig) {
@@ -14,13 +15,13 @@ export default function (eleventyConfig) {
     satoriOptions: {
       fonts: [
         {
-          name: 'Inter',
-          data: fs.readFileSync('./fonts/Inter-Regular.ttf'),
+          name: "Inter",
+          data: fs.readFileSync("./fonts/Inter-Regular.ttf"),
           weight: 700,
-          style: 'normal'
-        }
-      ]
-    }
+          style: "normal",
+        },
+      ],
+    },
   });
 
   eleventyConfig.addFilter("tagUrl", function (tag) {
@@ -53,8 +54,6 @@ export default function (eleventyConfig) {
     pages.filter((page) => page.data.layout)
   );
 
-
-
   // Create an array of all tags
   eleventyConfig.addCollection("tagList", function (collection) {
     let tagSet = new Set();
@@ -77,14 +76,13 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addWatchTarget("./styles/tailwind.config.js");
   eleventyConfig.addWatchTarget("./styles/tailwind.css");
-  eleventyConfig.watchIgnores.add('src/assets/images/social/**/*');
+  eleventyConfig.watchIgnores.add("src/assets/images/social/**/*");
   eleventyConfig.addPassthroughCopy({ "./_tmp/style.css": "./style.css" });
   eleventyConfig.addPassthroughCopy({ "./src/assets": "/" });
 
   eleventyConfig.addShortcode("version", function () {
     return now;
   });
-
 
   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
     if (
@@ -101,6 +99,13 @@ export default function (eleventyConfig) {
 
     return content;
   });
+
+  eleventyConfig.on("eleventy.after", () => {
+    execSync(`npx pagefind --site _site --glob \"**/*.html\"`, {
+      encoding: "utf-8",
+    });
+  });
+
   return {
     dir: {
       input: "src",
