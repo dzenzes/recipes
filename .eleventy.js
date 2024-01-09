@@ -1,8 +1,9 @@
-const eleventyPluginCookLang = require("eleventy-plugin-cooklang");
-const pluginNavigation = require("@11ty/eleventy-navigation");
-const htmlmin = require("html-minifier");
+import pluginNavigation from "@11ty/eleventy-navigation";
+import eleventyPluginCookLang from "eleventy-plugin-cooklang";
+import htmlmin from "html-minifier";
+
 const now = String(Date.now());
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginNavigation);
   eleventyConfig.addPlugin(eleventyPluginCookLang, {
     limitIngredientDecimals: 2,
@@ -20,7 +21,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("recipes", function (collectionApi) {
     return collectionApi
       .getAll()
-      .filter((i) => i.data.layout == "pages/recipe.njk")
+      .filter((i) => i.data.layout === "pages/recipe.njk")
       .sort((a, b) => {
         return a.data.title > b.data.title ? 1 : -1;
       });
@@ -70,7 +71,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget("./styles/tailwind.css");
 
   eleventyConfig.addPassthroughCopy({ "./_tmp/style.css": "./style.css" });
-  // eleventyConfig.addPassthroughCopy({ "./src/*.cook": "./" });
   eleventyConfig.addPassthroughCopy({ "./src/assets": "/" });
 
   eleventyConfig.addShortcode("version", function () {
@@ -88,12 +88,11 @@ module.exports = function (eleventyConfig) {
       outputPath &&
       outputPath.endsWith(".html")
     ) {
-      let minified = htmlmin.minify(content, {
+      return htmlmin.minify(content, {
         useShortDoctype: true,
         removeComments: true,
         collapseWhitespace: true,
       });
-      return minified;
     }
 
     return content;
@@ -109,4 +108,4 @@ module.exports = function (eleventyConfig) {
     dataTemplateEngine: "njk",
     markdownTemplateEngine: "njk",
   };
-};
+}
