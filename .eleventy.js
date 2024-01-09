@@ -1,12 +1,26 @@
 import pluginNavigation from "@11ty/eleventy-navigation";
 import eleventyPluginCookLang from "eleventy-plugin-cooklang";
 import htmlmin from "html-minifier";
+import EleventyPluginOgImage from 'eleventy-plugin-og-image';
+import fs from 'fs';
 
 const now = String(Date.now());
 export default function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginNavigation);
   eleventyConfig.addPlugin(eleventyPluginCookLang, {
     limitIngredientDecimals: 2,
+  });
+  eleventyConfig.addPlugin(EleventyPluginOgImage, {
+    satoriOptions: {
+      fonts: [
+        {
+          name: 'Inter',
+          data: fs.readFileSync('./fonts/Inter-Regular.ttf'),
+          weight: 700,
+          style: 'normal'
+        }
+      ]
+    }
   });
 
   eleventyConfig.addFilter("tagUrl", function (tag) {
@@ -39,13 +53,7 @@ export default function (eleventyConfig) {
     pages.filter((page) => page.data.layout)
   );
 
-  // We'll use the path (`fileSlug`) as the name of the image.
-  // The homepage ("index.html") won't have a slug, so we'll
-  // just call it "index".
-  eleventyConfig.addFilter(
-    "toSocialSharingImagePath",
-    (path) => path || "index"
-  );
+
 
   // Create an array of all tags
   eleventyConfig.addCollection("tagList", function (collection) {
@@ -69,18 +77,14 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addWatchTarget("./styles/tailwind.config.js");
   eleventyConfig.addWatchTarget("./styles/tailwind.css");
-
+  eleventyConfig.watchIgnores.add('src/assets/images/social/**/*');
   eleventyConfig.addPassthroughCopy({ "./_tmp/style.css": "./style.css" });
   eleventyConfig.addPassthroughCopy({ "./src/assets": "/" });
 
   eleventyConfig.addShortcode("version", function () {
     return now;
   });
-  eleventyConfig.addShortcode(
-    "getSharingImage",
-    ({ fileSlug }) =>
-      `https://recipes.zenzes.me/images/social/${fileSlug || "index"}.jpg`
-  );
+
 
   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
     if (

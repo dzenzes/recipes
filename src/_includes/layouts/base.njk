@@ -15,17 +15,7 @@
         <meta property="og:type" content="website">
         <meta property="og:title" content="{{ title or metadata.title }}">
         <meta property="og:description" content="{{ description or metadata.description }}">
-        <meta property="og:image" content="{% getSharingImage page %}">
-
-        <!-- Twitter Meta Tags -->
-        <meta name="twitter:card" content="summary_large_image"/>
-        <meta name="twitter:site" content="danielzenzes"/>
-        <meta name="twitter:card" content="summary_large_image">
-        <meta property="twitter:domain" content="recipes.zenzes.me">
-
-        <meta name="twitter:title" content="{{ title or metadata.title }}">
-        <meta name="twitter:description" content="{{ description or metadata.description }}">
-        <meta name="twitter:image" content="{% getSharingImage page %}">
+        {% ogImage "./og-image.og.njk", { title: title or metadata.title, subtitle:description or metadata.description } %}
 
     </head>
     <body>

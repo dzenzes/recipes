@@ -1,0 +1,60 @@
+<style>
+    .wrapper {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: stretch;
+        background: white;
+    }
+    .inner {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        align-items: center;
+        margin: 80px;
+
+    }
+
+    .title {
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Inter';
+        font-weight: 700;
+        color: black;
+        text-align: left;
+    }
+
+    .title h1 {
+        font-size: 80px;
+
+    }
+    .title h2 {
+        font-size: 44px;
+    }
+    .footer {
+        display: flex;
+        justify-self: flex-end;
+        flex-grow: 0;
+        font-family: 'Inter';
+        font-weight: 700;
+        color: black;
+        text-align: center;
+    }
+    .footer p {
+        font-size: 30px;
+    }
+</style>
+<div class="wrapper">
+    <div class="inner">
+        <div class="title">
+            <h1>👨‍🍳 {{ title }}</h1>
+            <h2>{{ subTitle }}</h2>
+        </div>
+        <div class="footer">
+            <p>recipes.zenzes.me</p>
+        </div>
+    </div>
+</div>
