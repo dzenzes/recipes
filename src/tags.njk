@@ -15,7 +15,7 @@ permalink: /tags/{{tag}}/
 {% from 'macros/card.njk' import recipecard %}
 <h1>Tag “{{ tag | formatTag }}”</h1>
 
-<section class="grid grid-cols-1 gap-5 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
+<section class="grid grid-cols-1 gap-5 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3" data-pagefind-ignore>
   {% set taglist = collections[tag] %}
   {% for recipe in taglist | reverse %}
     {{recipecard(recipe)}}

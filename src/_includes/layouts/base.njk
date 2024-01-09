@@ -19,13 +19,13 @@
         <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
     </head>
     <body>
-        <header class="max-w-3xl py-12 mx-auto prose text-slate-400 lg:prose-xl">
-            <h1 >
-                <a href="/">{{ title or metadata.title}}</a>
+        <header class="max-w-3xl py-12 mx-auto prose text-slate-400 lg:prose-xl" data-pagefind-ignore="all">
+            <h1>
+                <a href="/">{{ metadata.title}}</a>
             </h1>
         </header>
 
-        <main class="max-w-3xl px-6 mx-auto prose data-pagefind-body">
+        <main class="max-w-3xl px-6 mx-auto prose" data-pagefind-body>
             {{ content | safe }}
         </main>
 

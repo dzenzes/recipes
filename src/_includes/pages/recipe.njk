@@ -2,11 +2,12 @@
 layout: layouts/base.njk
 ---
 {% from 'macros/tags.njk' import tag %}
-
-{%if source %}
-    <p>
-        <a href="{{source}}">Quelle</a>
-    </p
+<article>
+    <h2>{{title}}</h2>
+    {%if source %}
+        <p>
+            <a href="{{source}}">Quelle</a>
+        </p
 {%endif%}
 
 {% if note %}
@@ -14,43 +15,43 @@ layout: layouts/base.njk
 {% endif %}
 
 <div>
-{% for tagitem in tags -%}
-    {{tag(tagitem)}}
+    {% for tagitem in tags -%}
+        {{tag(tagitem)}}
 
-{%- endfor %}
+    {%- endfor %}
 </div>
 
 <section>
-<h2>Zutaten:</h2>
-<ul>
-    {% for item in ingredients %}
-        <li>{% ingredient item %}</li>
-    {% endfor %}
-</ul>
+    <h2>Zutaten:</h2>
+    <ul>
+        {% for item in ingredients %}
+            <li>{% ingredient item %}</li>
+        {% endfor %}
+    </ul>
 </section>
 
 <section>
-<h2>Utensilien:</h2>
-<ul>
-    {% for item in cookware %}
-        <li>
-            {{ item.name }}
-        </li>
-    {% endfor %}
-</ul>
+    <h2>Utensilien:</h2>
+    <ul>
+        {% for item in cookware %}
+            <li>
+                {{ item.name }}
+            </li>
+        {% endfor %}
+    </ul>
 </section>
 
 <section>
-<h2>Anleitung</h2>
-<ul>
-    {% for step in steps %}
-        <li>
-            {%- for item in step -%}
-                {{ item | safe }}
-            {%- endfor -%}
-        </li>
-    {% endfor %}
-</ul>
+    <h2>Anleitung</h2>
+    <ul>
+        {% for step in steps %}
+            <li>
+                {%- for item in step -%}
+                    {{ item | safe }}
+                {%- endfor -%}
+            </li>
+        {% endfor %}
+    </ul>
 </section>
 
 {#
@@ -58,3 +59,5 @@ layout: layouts/base.njk
     <a href="/{{page.fileSlug}}.cook" title=".cook Datei zum Rezept">Download .cook</a>
 </p>
 #}
+
+</article
