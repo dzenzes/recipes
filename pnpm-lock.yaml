@@ -6,8 +6,8 @@ settings:
 
 devDependencies:
   '@11ty/eleventy':
-    specifier: 3.0.0-alpha.5
-    version: 3.0.0-alpha.5
+    specifier: 3.0.0-alpha.6
+    version: 3.0.0-alpha.6
   '@11ty/eleventy-navigation':
     specifier: 0.3.5
     version: 0.3.5
@@ -19,7 +19,7 @@ devDependencies:
     version: 0.0.5
   eleventy-plugin-og-image:
     specifier: ^3.0.0
-    version: 3.1.0(@11ty/eleventy@3.0.0-alpha.5)
+    version: 3.1.0(@11ty/eleventy@3.0.0-alpha.6)
   html-minifier:
     specifier: 4.0.0
     version: 4.0.0
@@ -82,8 +82,8 @@ packages:
       normalize-path: 3.0.0
     dev: true
 
-  /@11ty/eleventy@3.0.0-alpha.5:
-    resolution: {integrity: sha512-JRWRqoAalwkiWIb9dQHmSX40kSOD6vhUwt73df/PWZPYzlAPxx27Gfi96TzR2bE+lmZ8IwgQzhYEBenL9tJ9Ow==}
+  /@11ty/eleventy@3.0.0-alpha.6:
+    resolution: {integrity: sha512-wllqMiM3A9qRt1mUA6iETQfhRtpFfUnzCT7v4RK/5RFqX/Bjwmqe18v7dfStHSO+V2zv5hE32skdM23HigG+eg==}
     engines: {node: '>=18'}
     hasBin: true
     dependencies:
@@ -98,16 +98,16 @@ packages:
       chokidar: 3.6.0
       cross-spawn: 7.0.3
       debug: 4.3.4
-      dependency-graph: 0.11.0
+      dependency-graph: 1.0.0
       fast-glob: 3.3.2
       graceful-fs: 4.2.11
       gray-matter: 4.0.3
       is-glob: 4.0.3
-      iso-639-1: 3.1.0
+      iso-639-1: 3.1.2
       kleur: 4.1.5
-      liquidjs: 10.10.0
+      liquidjs: 10.10.2
       luxon: 3.4.4
-      markdown-it: 14.0.0
+      markdown-it: 14.1.0
       micromatch: 4.0.5
       minimist: 1.2.8
       moo: 0.5.2
@@ -784,6 +784,11 @@ packages:
     engines: {node: '>= 0.6.0'}
     dev: true
 
+  /dependency-graph@1.0.0:
+    resolution: {integrity: sha512-cW3gggJ28HZ/LExwxP2B++aiKxhJXMSIt9K48FOXQkm+vuG5gyatXnLsONRJdzO/7VfjDIiaOOa/bs4l464Lwg==}
+    engines: {node: '>=4'}
+    dev: true
+
   /detect-libc@2.0.2:
     resolution: {integrity: sha512-UX6sGumvvqSaXgdKGUsgZWqcUyIXZ/vZTrlRT/iobiKhGL0zL4d3osHj3uqllWJK+i+sixDS/3COVEOFbupFyw==}
     engines: {node: '>=8'}
@@ -840,13 +845,13 @@ packages:
       '@cooklang/cooklang-ts': 1.2.0
     dev: true
 
-  /eleventy-plugin-og-image@3.1.0(@11ty/eleventy@3.0.0-alpha.5):
+  /eleventy-plugin-og-image@3.1.0(@11ty/eleventy@3.0.0-alpha.6):
     resolution: {integrity: sha512-Ih6eyZDoQblsgmdUZihgJ1jnNM9uEoI0IE4x3eMvKF+s1h2C+WvC1CnayHiPIN42P2RuqbGs5Tg7deHx2mhzkw==}
     engines: {node: '>=18'}
     peerDependencies:
       '@11ty/eleventy': '>=3.0.0-alpha.1'
     dependencies:
-      '@11ty/eleventy': 3.0.0-alpha.5
+      '@11ty/eleventy': 3.0.0-alpha.6
       '@11ty/eleventy-utils': 1.0.2
       '@resvg/resvg-js': 2.6.0
       '@sindresorhus/slugify': 2.2.1
@@ -1432,8 +1437,8 @@ packages:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
     dev: true
 
-  /iso-639-1@3.1.0:
-    resolution: {integrity: sha512-rWcHp9dcNbxa5C8jA/cxFlWNFNwy5Vup0KcFvgA8sPQs9ZeJHj/Eq0Y8Yz2eL8XlWYpxw4iwh9FfTeVxyqdRMw==}
+  /iso-639-1@3.1.2:
+    resolution: {integrity: sha512-Le7BRl3Jt9URvaiEHJCDEdvPZCfhiQoXnFgLAWNRhzFMwRFdWO7/5tLRQbiPzE394I9xd7KdRCM7S6qdOhwG5A==}
     engines: {node: '>=6.0'}
     dev: true
 
@@ -1484,11 +1489,11 @@ packages:
   /linkify-it@5.0.0:
     resolution: {integrity: sha512-5aHCbzQRADcdP+ATqnDuhhJ/MRIqDkZX5pyjFHRRysS8vZ5AbqGEoFIb6pYHPZ+L/OC2Lc+xT8uHVVR5CAK/wQ==}
     dependencies:
-      uc.micro: 2.0.0
+      uc.micro: 2.1.0
     dev: true
 
-  /liquidjs@10.10.0:
-    resolution: {integrity: sha512-f4gPvCq4uV4Fm5YezVUQoAMPmBMEuIE2LvgCnzyWoPRx+ZefH6b8DU2eb7znltRqATHF8zYvOsd5FD2z1spJgg==}
+  /liquidjs@10.10.2:
+    resolution: {integrity: sha512-UcuTUexKg/8CmX6I5KNghk13pl3c8Rqhm+WSWqrc17pQP9LjpYPpOLDKG9OMBeHDBQ70yyn/GOqyZ/EKJ4z5yg==}
     engines: {node: '>=14'}
     hasBin: true
     dependencies:
@@ -1527,8 +1532,8 @@ packages:
     engines: {node: '>=12'}
     dev: true
 
-  /markdown-it@14.0.0:
-    resolution: {integrity: sha512-seFjF0FIcPt4P9U39Bq1JYblX0KZCjDLFFQPHpL5AzHpqPEKtosxmdq/LTVZnjfH7tjt9BxStm+wXcDBNuYmzw==}
+  /markdown-it@14.1.0:
+    resolution: {integrity: sha512-a54IwgWPaeBCAAsv13YgmALOF1elABB08FxO9i+r4VFk5Vl4pKokRPeX8u5TCgSsPi6ec1otfLjdOpVcgbpshg==}
     hasBin: true
     dependencies:
       argparse: 2.0.1
@@ -1536,7 +1541,7 @@ packages:
       linkify-it: 5.0.0
       mdurl: 2.0.0
       punycode.js: 2.3.1
-      uc.micro: 2.0.0
+      uc.micro: 2.1.0
     dev: true
 
   /maximatch@0.1.0:
@@ -1665,7 +1670,7 @@ packages:
     resolution: {integrity: sha512-p7eGEiQil0YUV3ItH4/tBb781L5impVmmx2E9FRKF7d18XXzp4PGT2tdYMFY6wQqgxD0IwNZOiSJ0/K0fSi/OA==}
     engines: {node: '>=10'}
     dependencies:
-      semver: 7.5.4
+      semver: 7.6.0
     dev: true
 
   /node-addon-api@6.1.0:
@@ -2122,14 +2127,6 @@ packages:
     resolution: {integrity: sha512-YM3/ITh2MJ5MtzaM429anh+x2jiLVjqILF4m4oyQB18W7Ggea7BfqdH/wGMK7dDiMghv/6WG7znWMwUDzJiXow==}
     dev: true
 
-  /semver@7.5.4:
-    resolution: {integrity: sha512-1bCSESV6Pv+i21Hvpxp3Dx+pSD8lIPt8uVjRrxAUt/nbswYc+tK6Y2btiULjd4+fnq15PX+nqQDC7Oft7WkwcA==}
-    engines: {node: '>=10'}
-    hasBin: true
-    dependencies:
-      lru-cache: 6.0.0
-    dev: true
-
   /semver@7.6.0:
     resolution: {integrity: sha512-EnwXhrlwXMk9gKu5/flx5sv/an57AkRplG3hTK68W7FRDN+k+OWBj65M7719OkA82XLBxrcX0KSHj+X5COhOVg==}
     engines: {node: '>=10'}
@@ -2168,7 +2165,7 @@ packages:
       detect-libc: 2.0.2
       node-addon-api: 6.1.0
       prebuild-install: 7.1.1
-      semver: 7.5.4
+      semver: 7.6.0
       simple-get: 4.0.1
       tar-fs: 3.0.4
       tunnel-agent: 0.6.0
@@ -2460,8 +2457,8 @@ packages:
       is-typed-array: 1.1.13
     dev: true
 
-  /uc.micro@2.0.0:
-    resolution: {integrity: sha512-DffL94LsNOccVn4hyfRe5rdKa273swqeA5DJpMOeFmEn1wCDc7nAbbB0gXlgBCL7TNzeTv6G7XVWzan7iJtfig==}
+  /uc.micro@2.1.0:
+    resolution: {integrity: sha512-ARDJmphmdvUk6Glw7y9DQ2bFkKBHwQHLi2lsaH6PPmz/Ka9sFOBsBluozhDltWmnv9u/cF6Rt87znRTPV+yp/A==}
     dev: true
 
   /uglify-js@3.17.4:
