@@ -6,8 +6,8 @@ settings:
 
 devDependencies:
   '@11ty/eleventy':
-    specifier: 3.0.0-alpha.7
-    version: 3.0.0-alpha.7
+    specifier: 3.0.0-alpha.9
+    version: 3.0.0-alpha.9
   '@11ty/eleventy-navigation':
     specifier: 0.3.5
     version: 0.3.5
@@ -19,7 +19,7 @@ devDependencies:
     version: 0.0.5
   eleventy-plugin-og-image:
     specifier: ^3.0.0
-    version: 3.1.0(@11ty/eleventy@3.0.0-alpha.7)
+    version: 3.1.0(@11ty/eleventy@3.0.0-alpha.9)
   html-minifier:
     specifier: 4.0.0
     version: 4.0.0
@@ -84,8 +84,8 @@ packages:
       normalize-path: 3.0.0
     dev: true
 
-  /@11ty/eleventy@3.0.0-alpha.7:
-    resolution: {integrity: sha512-0d81WOSU9OVnRZKwnMl61cWxXuM4fXyJabgW9Q5PovO0Yx/eT+xkdzhRFwC70cSgLVVsZY5BYnvlauCW1hqNrw==}
+  /@11ty/eleventy@3.0.0-alpha.9:
+    resolution: {integrity: sha512-q5tBKD7/AHyYN3R733GeKGgR8mPVTtmaRerqrhgmK2qyGS404QMZncB1knBPx6//vtwLEI954Caofu1A8M7Lrw==}
     engines: {node: '>=18'}
     hasBin: true
     dependencies:
@@ -857,13 +857,13 @@ packages:
       '@cooklang/cooklang-ts': 1.2.0
     dev: true
 
-  /eleventy-plugin-og-image@3.1.0(@11ty/eleventy@3.0.0-alpha.7):
+  /eleventy-plugin-og-image@3.1.0(@11ty/eleventy@3.0.0-alpha.9):
     resolution: {integrity: sha512-Ih6eyZDoQblsgmdUZihgJ1jnNM9uEoI0IE4x3eMvKF+s1h2C+WvC1CnayHiPIN42P2RuqbGs5Tg7deHx2mhzkw==}
     engines: {node: '>=18'}
     peerDependencies:
       '@11ty/eleventy': '>=3.0.0-alpha.1'
     dependencies:
-      '@11ty/eleventy': 3.0.0-alpha.7
+      '@11ty/eleventy': 3.0.0-alpha.9
       '@11ty/eleventy-utils': 1.0.2
       '@resvg/resvg-js': 2.6.0
       '@sindresorhus/slugify': 2.2.1
