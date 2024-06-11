@@ -6,8 +6,8 @@ settings:
 
 devDependencies:
   '@11ty/eleventy':
-    specifier: 3.0.0-alpha.11
-    version: 3.0.0-alpha.11
+    specifier: 3.0.0-alpha.12
+    version: 3.0.0-alpha.12
   '@11ty/eleventy-navigation':
     specifier: 0.3.5
     version: 0.3.5
@@ -19,7 +19,7 @@ devDependencies:
     version: 0.0.5
   eleventy-plugin-og-image:
     specifier: ^3.0.0
-    version: 3.1.0(@11ty/eleventy@3.0.0-alpha.11)
+    version: 3.1.0(@11ty/eleventy@3.0.0-alpha.12)
   html-minifier:
     specifier: 4.0.0
     version: 4.0.0
@@ -100,8 +100,8 @@ packages:
       normalize-path: 3.0.0
     dev: true
 
-  /@11ty/eleventy@3.0.0-alpha.11:
-    resolution: {integrity: sha512-NNhx2rySlFWfij2YQ87eU+03yLOhBNPRqGDTK/gjvsi/bY/OSAbb3sQLrycQpM6V5XtMlIqh6C1adxT0CMz3Rg==}
+  /@11ty/eleventy@3.0.0-alpha.12:
+    resolution: {integrity: sha512-dtBcjyAeUDKzYgrJ6/wTqZIUXCgEWGjlBhRT/5jX8GJ4yTkDxtmTzCbkaWOwvmqpYB5+OuZdnee9wAmm1pRDsQ==}
     engines: {node: '>=18'}
     hasBin: true
     dependencies:
@@ -645,7 +645,7 @@ packages:
     engines: {node: '>= 8.10.0'}
     dependencies:
       anymatch: 3.1.2
-      braces: 3.0.2
+      braces: 3.0.3
       glob-parent: 5.1.2
       is-binary-path: 2.1.0
       is-glob: 4.0.3
@@ -881,13 +881,13 @@ packages:
       '@cooklang/cooklang-ts': 1.2.0
     dev: true
 
-  /eleventy-plugin-og-image@3.1.0(@11ty/eleventy@3.0.0-alpha.11):
+  /eleventy-plugin-og-image@3.1.0(@11ty/eleventy@3.0.0-alpha.12):
     resolution: {integrity: sha512-Ih6eyZDoQblsgmdUZihgJ1jnNM9uEoI0IE4x3eMvKF+s1h2C+WvC1CnayHiPIN42P2RuqbGs5Tg7deHx2mhzkw==}
     engines: {node: '>=18'}
     peerDependencies:
       '@11ty/eleventy': '>=3.0.0-alpha.1'
     dependencies:
-      '@11ty/eleventy': 3.0.0-alpha.11
+      '@11ty/eleventy': 3.0.0-alpha.12
       '@11ty/eleventy-utils': 1.0.2
       '@resvg/resvg-js': 2.6.0
       '@sindresorhus/slugify': 2.2.1
@@ -1587,13 +1587,6 @@ packages:
     resolution: {integrity: sha512-2Fgx1Ycm599x+WGpIYwJOvsjmXFzTSc34IwDWALRA/8AopUKAVPwfJ+h5+f85BCp0PWmmJcWzEpxOpoXycMpdA==}
     dev: true
 
-  /lru-cache@6.0.0:
-    resolution: {integrity: sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==}
-    engines: {node: '>=10'}
-    dependencies:
-      yallist: 4.0.0
-    dev: true
-
   /luxon@3.4.4:
     resolution: {integrity: sha512-zobTr7akeGHnv7eBOXcRgMeCP6+uyYsczwmeRCauvpvaAltgNyTbLH/+VaEAPUeWBT+1GuNmz4wC/6jtQzbbVA==}
     engines: {node: '>=12'}
@@ -1753,7 +1746,7 @@ packages:
     resolution: {integrity: sha512-p7eGEiQil0YUV3ItH4/tBb781L5impVmmx2E9FRKF7d18XXzp4PGT2tdYMFY6wQqgxD0IwNZOiSJ0/K0fSi/OA==}
     engines: {node: '>=10'}
     dependencies:
-      semver: 7.6.0
+      semver: 7.6.2
     dev: true
 
   /node-addon-api@6.1.0:
@@ -2216,14 +2209,6 @@ packages:
     resolution: {integrity: sha512-YM3/ITh2MJ5MtzaM429anh+x2jiLVjqILF4m4oyQB18W7Ggea7BfqdH/wGMK7dDiMghv/6WG7znWMwUDzJiXow==}
     dev: true
 
-  /semver@7.6.0:
-    resolution: {integrity: sha512-EnwXhrlwXMk9gKu5/flx5sv/an57AkRplG3hTK68W7FRDN+k+OWBj65M7719OkA82XLBxrcX0KSHj+X5COhOVg==}
-    engines: {node: '>=10'}
-    hasBin: true
-    dependencies:
-      lru-cache: 6.0.0
-    dev: true
-
   /semver@7.6.2:
     resolution: {integrity: sha512-FNAIBWCx9qcRhoHcgcJ0gvU7SN1lYU2ZXuSfl04bSC5OpvDHFyJCjdNHomPXxjQlCBU67YW64PzY7/VIEH7F2w==}
     engines: {node: '>=10'}
@@ -2285,7 +2270,7 @@ packages:
       detect-libc: 2.0.2
       node-addon-api: 6.1.0
       prebuild-install: 7.1.1
-      semver: 7.6.0
+      semver: 7.6.2
       simple-get: 4.0.1
       tar-fs: 3.0.4
       tunnel-agent: 0.6.0
@@ -2673,10 +2658,6 @@ packages:
         optional: true
       utf-8-validate:
         optional: true
-    dev: true
-
-  /yallist@4.0.0:
-    resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==}
     dev: true
 
   /yaml@2.2.2:
