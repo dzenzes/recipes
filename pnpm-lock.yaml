@@ -6,8 +6,8 @@ settings:
 
 devDependencies:
   '@11ty/eleventy':
-    specifier: 3.0.0-alpha.13
-    version: 3.0.0-alpha.13
+    specifier: 3.0.0-alpha.14
+    version: 3.0.0-alpha.14
   '@11ty/eleventy-navigation':
     specifier: 0.3.5
     version: 0.3.5
@@ -19,7 +19,7 @@ devDependencies:
     version: 0.0.5
   eleventy-plugin-og-image:
     specifier: ^3.0.0
-    version: 3.1.0(@11ty/eleventy@3.0.0-alpha.13)
+    version: 3.1.0(@11ty/eleventy@3.0.0-alpha.14)
   html-minifier:
     specifier: 4.0.0
     version: 4.0.0
@@ -100,8 +100,8 @@ packages:
       normalize-path: 3.0.0
     dev: true
 
-  /@11ty/eleventy@3.0.0-alpha.13:
-    resolution: {integrity: sha512-LZ1mI2JoB/vu6eIzeh9Eim0istAmKiJ0C5LEYG8HigvGgVsADd7OGHpOeOpDgKjotPSO+DTVh48gQj/cW2mRNw==}
+  /@11ty/eleventy@3.0.0-alpha.14:
+    resolution: {integrity: sha512-SQGvi/0cSrgyjhTocO8nGpivQbZBXnFlVLp1M3H8xcdvpXYgCVHiEYvrY79TnDd9Nxvj5QtsQuCiselJb3X16g==}
     engines: {node: '>=18'}
     hasBin: true
     dependencies:
@@ -114,6 +114,7 @@ packages:
       '@11ty/posthtml-urls': 1.0.0
       '@sindresorhus/slugify': 2.2.1
       bcp-47-normalize: 2.3.0
+      chardet: 2.0.0
       chokidar: 3.6.0
       cross-spawn: 7.0.3
       debug: 4.3.5
@@ -124,7 +125,7 @@ packages:
       is-glob: 4.0.3
       iso-639-1: 3.1.2
       kleur: 4.1.5
-      liquidjs: 10.13.1
+      liquidjs: 10.14.0
       luxon: 3.4.4
       markdown-it: 14.1.0
       micromatch: 4.0.7
@@ -640,6 +641,10 @@ packages:
     resolution: {integrity: sha512-dU+Tx2fsypxTgtLoE36npi3UqcjSSMNYfkqgmoEhtZrraP5VWq0K7FkWVTYa8eMPtnU/G2txVsfdCJTn9uzpuQ==}
     dev: true
 
+  /chardet@2.0.0:
+    resolution: {integrity: sha512-xVgPpulCooDjY6zH4m9YW3jbkaBe3FKIAvF5sj5t7aBNsVl2ljIE+xwJ4iNgiDZHFQvNIpjdKdVOQvvk5ZfxbQ==}
+    dev: true
+
   /chokidar@3.6.0:
     resolution: {integrity: sha512-7VT13fmjotKpGipCW9JEQAusEPE+Ei8nl6/g4FBAmIm0GOOLMua9NDDo/DWp0ZAxCr3cPq5ZpBqmPAQgDda2Pw==}
     engines: {node: '>= 8.10.0'}
@@ -881,13 +886,13 @@ packages:
       '@cooklang/cooklang-ts': 1.2.0
     dev: true
 
-  /eleventy-plugin-og-image@3.1.0(@11ty/eleventy@3.0.0-alpha.13):
+  /eleventy-plugin-og-image@3.1.0(@11ty/eleventy@3.0.0-alpha.14):
     resolution: {integrity: sha512-Ih6eyZDoQblsgmdUZihgJ1jnNM9uEoI0IE4x3eMvKF+s1h2C+WvC1CnayHiPIN42P2RuqbGs5Tg7deHx2mhzkw==}
     engines: {node: '>=18'}
     peerDependencies:
       '@11ty/eleventy': '>=3.0.0-alpha.1'
     dependencies:
-      '@11ty/eleventy': 3.0.0-alpha.13
+      '@11ty/eleventy': 3.0.0-alpha.14
       '@11ty/eleventy-utils': 1.0.2
       '@resvg/resvg-js': 2.6.0
       '@sindresorhus/slugify': 2.2.1
@@ -1559,8 +1564,8 @@ packages:
       uc.micro: 2.1.0
     dev: true
 
-  /liquidjs@10.13.1:
-    resolution: {integrity: sha512-QCQ69sbyMdA1970NEsG7KdQoKi6N+lGg55izisvKvrrRO1nrpS/YBAnzDndR13exYB4xE9A87qdOMuaXPn9v9A==}
+  /liquidjs@10.14.0:
+    resolution: {integrity: sha512-Zjg35Yo3L/2aNy7QkICha/ulbXRtZS7oRenWyDDfw+J34Xy3fOKWWHxASC9r0gbxN661nrwmG/kOIKHfYcVk4Q==}
     engines: {node: '>=14'}
     hasBin: true
     dependencies:
