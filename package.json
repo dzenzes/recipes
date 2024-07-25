@@ -29,6 +29,6 @@
     "eleventy-plugin-og-image": "^3.0.0",
     "html-minifier": "4.0.0",
     "pagefind": "^1.0.4",
-    "tailwindcss": "3.4.6"
+    "tailwindcss": "3.4.7"
   }
 }
