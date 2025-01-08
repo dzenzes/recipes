@@ -4,7 +4,7 @@ import { execSync } from "child_process";
 import { Recipe } from "@cooklang/cooklang-ts";
 import EleventyPluginOgImage from "eleventy-plugin-og-image";
 import fs from "fs";
-import htmlmin from "html-minifier";
+import htmlmin from "html-minifier-terser";
 
 const now = String(Date.now());
 
@@ -165,19 +165,16 @@ export default function (eleventyConfig) {
     return now;
   });
 
-  eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
-    if (
-      process.env.ELEVENTY_PRODUCTION &&
-      outputPath &&
-      outputPath.endsWith(".html")
-    ) {
-      return htmlmin.minify(content, {
+  eleventyConfig.addTransform("htmlmin", function (content) {
+    if ((this.page.outputPath || "").endsWith(".html")) {
+      let minified = htmlmin.minify(content, {
         useShortDoctype: true,
         removeComments: true,
         collapseWhitespace: true,
       });
-    }
 
+      return minified;
+    }
     return content;
   });
 
