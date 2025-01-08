@@ -21,14 +21,14 @@
     "sharing-images": "node generate-sharing-images.js",
     "start": "eleventy --serve & npx tailwindcss -i styles/tailwind.css -c styles/tailwind.config.js -o _site/style.css --watch"
   },
-  "devDependencies": {
-    "@11ty/eleventy": "3.0.0-alpha.17",
+  "dependencies": {
+    "@11ty/eleventy": "3.0.0",
     "@11ty/eleventy-navigation": "0.3.5",
-    "@tailwindcss/typography": "0.5.15",
-    "eleventy-plugin-cooklang": "0.0.5",
-    "eleventy-plugin-og-image": "^3.0.0",
+    "@cooklang/cooklang-ts": "1.2.7",
+    "@tailwindcss/typography": "0.5.16",
+    "eleventy-plugin-og-image": "4.0.1",
     "html-minifier": "4.0.0",
-    "pagefind": "^1.0.4",
+    "pagefind": "1.3.0",
     "tailwindcss": "3.4.17"
   }
 }
