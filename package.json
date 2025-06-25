@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@11ty/eleventy": "3.1.2",
-    "@11ty/eleventy-navigation": "0.3.5",
+    "@11ty/eleventy-navigation": "1.0.4",
     "@cooklang/cooklang-ts": "1.2.7",
     "@tailwindcss/typography": "0.5.16",
     "eleventy-plugin-og-image": "4.0.1",
